@@ -14,3 +14,8 @@ nbproject
 .eprj
 .sass-cache
 .idea
+
+#
+/.bundle/
+/vendor/
+/vendor/bundle/
