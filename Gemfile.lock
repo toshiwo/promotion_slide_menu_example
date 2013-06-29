@@ -55,5 +55,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  ProMotion
+  ProMotion (~> 0.7.6)
   motion-cocoapods
