@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
 
 gem 'motion-cocoapods'
-gem 'ProMotion', '~> 0.7.6'
+gem 'ProMotion', :github => 'clearsightstudio/ProMotion', :branch => 'version-1.0'
 

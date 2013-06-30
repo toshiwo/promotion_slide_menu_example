@@ -23,14 +23,14 @@ class LeftScreen < ProMotion::Screen
       screen = DetailScreen.new color_name: :whiteColor
       screen.on_load if screen.respond_to? :on_load
 
-      self.sidePanelController.centerPanel.setViewControllers [ screen.main_controller ], animated: false
+      self.sidePanelController.centerPanel.setViewControllers [ screen ], animated: false
 
       self.sidePanelController._placeButtonForLeftPanel # TODO:
     else
       screen = MainTableScreen.new
       screen.on_load if screen.respond_to? :on_load
 
-      self.sidePanelController.centerPanel.setViewControllers [ screen.main_controller ], animated: false
+      self.sidePanelController.centerPanel.setViewControllers [ screen ], animated: false
 
       self.sidePanelController._placeButtonForLeftPanel # TODO:
     end

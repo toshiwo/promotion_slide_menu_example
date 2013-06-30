@@ -1,7 +1,13 @@
+GIT
+  remote: git://github.com/clearsightstudio/ProMotion.git
+  revision: 23981bff719dd0098bb0682d03078b63a03151d6
+  branch: version-1.0
+  specs:
+    ProMotion (0.7.6)
+
 GEM
   remote: https://rubygems.org/
   specs:
-    ProMotion (0.7.6)
     activesupport (3.2.13)
       i18n (= 0.6.1)
       multi_json (~> 1.0)
@@ -55,5 +61,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  ProMotion (~> 0.7.6)
+  ProMotion!
   motion-cocoapods
