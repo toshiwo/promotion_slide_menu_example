@@ -1,4 +1,4 @@
-promotion_slide_menu_example
+ProMotion Slide Menu example
 ============================
 
 ProMotion + JASidePanels example
