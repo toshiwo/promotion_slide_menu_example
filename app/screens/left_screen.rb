@@ -20,20 +20,12 @@ class LeftScreen < ProMotion::Screen
     current_panel = self.sidePanelController.centerPanel.topViewController
 
     if current_panel.is_a? MainTableScreen
-      screen = DetailScreen.new color_name: :whiteColor
-      screen.on_load if screen.respond_to? :on_load
-
-      self.sidePanelController.centerPanel.setViewControllers [ screen ], animated: false
-
-      self.sidePanelController._placeButtonForLeftPanel # TODO:
+      screen = DetailScreen.new nav_bar: true, color_name: :whiteColor
     else
-      screen = MainTableScreen.new
-      screen.on_load if screen.respond_to? :on_load
-
-      self.sidePanelController.centerPanel.setViewControllers [ screen ], animated: false
-
-      self.sidePanelController._placeButtonForLeftPanel # TODO:
+      screen = MainTableScreen.new nav_bar: true
     end
+
+    self.sidePanelController.centerPanel = screen.navigation_controller
   end
 
 end

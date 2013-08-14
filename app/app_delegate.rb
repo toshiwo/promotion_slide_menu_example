@@ -6,19 +6,16 @@ class AppDelegate
     @viewController = JASidePanelController.new
 
     ## leftPanel
-    @left_screen = LeftScreen.new nav_bar: true
-    @left_screen.on_load if @left_screen.respond_to? :on_load
-    @viewController.leftPanel = @left_screen.navigation_controller
+    left_screen = LeftScreen.new nav_bar: true
+    @viewController.leftPanel = left_screen.navigation_controller
 
     ## centerPanel
-    @screen = MainTableScreen.new
-    @screen.on_load if @screen.respond_to? :on_load
-    @viewController.centerPanel = UINavigationController.alloc.initWithRootViewController(@screen)
+    screen = MainTableScreen.new nav_bar: true
+    @viewController.centerPanel = screen.navigation_controller
 
     ## rightPanel
-    @right_screen = RightScreen.new
-    @right_screen.on_load if @right_screen.respond_to? :on_load
-    @viewController.rightPanel = @right_screen
+    right_screen = RightScreen.new
+    @viewController.rightPanel = right_screen
 
     frame = UIScreen.mainScreen.bounds
     self.window = UIWindow.alloc.initWithFrame(frame)
